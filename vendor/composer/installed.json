@@ -1,17 +1,17 @@
 [
     {
         "name": "htmlburger/carbon-fields",
-        "version": "2.0.2",
-        "version_normalized": "2.0.2.0",
+        "version": "2.0.3",
+        "version_normalized": "2.0.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/htmlburger/carbon-fields.git",
-            "reference": "af0ac872524f5cbfa59be47bc569da812ce242b4"
+            "reference": "54bd146dac05a8fbbaa3e0ca5bc1c2c84b69beb6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/af0ac872524f5cbfa59be47bc569da812ce242b4",
-            "reference": "af0ac872524f5cbfa59be47bc569da812ce242b4",
+            "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/54bd146dac05a8fbbaa3e0ca5bc1c2c84b69beb6",
+            "reference": "54bd146dac05a8fbbaa3e0ca5bc1c2c84b69beb6",
             "shasum": ""
         },
         "require": {
@@ -21,7 +21,7 @@
             "mockery/mockery": "^0.9.7",
             "phpunit/phpunit": "~4.8"
         },
-        "time": "2017-07-17 13:36:00",
+        "time": "2017-07-18 12:31:28",
         "type": "library",
         "installation-source": "dist",
         "autoload": {

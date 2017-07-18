@@ -5,7 +5,7 @@ Donate link: https://typewheel.xyz/give
 Tags: css, scss, theme, style, time, seasons, design
 Requires at least: 3.1
 Tested up to: 4.8
-Stable tag: 0.2
+Stable tag: 0.3
 License: GPLv2 or later
 
 Applies seasonal CSS to your site

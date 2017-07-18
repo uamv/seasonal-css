@@ -46,6 +46,9 @@ class Seasonal_CSS {
 		add_action( 'after_setup_theme', array( $this, 'load_carbon' ) );
 		add_action( 'carbon_fields_register_fields', array( $this, 'theme_options' ) );
 
+		add_filter( 'carbon_fields_seasonal_css_button_label', array( $this, 'button_text' ) );
+		add_filter( 'carbon_fields_theme_options_container_access_capability', array( $this, 'set_capability' ), 10, 2 );
+
 		add_action( 'init', array( $this, 'determine_active_rules' ) );
 
 		add_action( 'wp_head', array( $this, 'add_css' ) );
@@ -99,12 +102,33 @@ class Seasonal_CSS {
 	                        ->set_width(16)
 	                ))
 	                ->set_layout('tabbed-vertical')
-	            ))
-			->add_fields( array(
-				Field::make('html', 'seasonal_css_set')
-					->set_html( $this->rules_html )
-			));
+	            ));
+
 	} // end theme_options
+
+	/**
+	 * Set button text
+	 *
+	 * @since    0.2
+	 */
+	public function button_text( $text ) {
+
+		return 'Save Seasonal CSS Rules';
+
+	} // end set_capability
+
+	/**
+	 * Set capability required to add rules
+	 *
+	 * @since    0.2
+	 */
+	public function set_capability( $enable, $title ) {
+
+		if ( 'Seasonal CSS' == $title ) {
+			return apply_filters( 'seasonal_css_capability', 'switch_themes' );
+		}
+
+	} // end set_capability
 
 	/**
 	 * Adds active CSS to the site header

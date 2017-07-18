@@ -47,7 +47,7 @@ class Seasonal_CSS {
 		add_action( 'carbon_fields_register_fields', array( $this, 'theme_options' ) );
 
 		add_filter( 'carbon_fields_seasonal_css_button_label', array( $this, 'button_text' ) );
-		add_filter( 'carbon_fields_theme_options_container_access_capability', array( $this, 'set_capability' ), 10, 2 );
+		// add_filter( 'carbon_fields_theme_options_container_access_capability', array( $this, 'set_capability' ), 10, 2 );
 
 		add_action( 'init', array( $this, 'determine_active_rules' ) );
 

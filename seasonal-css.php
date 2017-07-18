@@ -17,7 +17,7 @@
  * Plugin URI:        http://typewheel.xyz/wp/
  * Description:       The Seasonal CSS plugin was created to allow seasonal styling of a WordPress site.
  * Version:           0.2
- * Author:            UaMV
+ * Author:            Typewheel
  * Author URI:        https://typewheel.xyz/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt

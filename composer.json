@@ -1,15 +1,5 @@
 {
     "require": {
         "htmlburger/carbon-fields": "^2.0"
-    },
-    "extra": {
-        "installer-paths": {
-            "vendor/{$vendor}/{$name}/": ["type:wordpress-plugin"]
-        }
-    },
-    "scripts": {
-        "pre-autoload-dump": [
-            "rm ./vendor/htmlburger/carbon-fields/carbon-fields-plugin.php"
-        ]
     }
 }

@@ -4,146 +4,31 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bb0c0333f4fbac065fd3c78828b53c79",
-    "content-hash": "b342e5b5e01aeb9a9eaed6dbc80bf179",
+    "hash": "053c7897a5695d5f1d1039d0311f306a",
+    "content-hash": "ec7a926637a40eb6ee4adc5b71df5293",
     "packages": [
         {
-            "name": "composer/installers",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/composer/installers.git",
-                "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/79ad876c7498c0bbfe7eed065b8651c93bfd6045",
-                "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^1.0"
-            },
-            "replace": {
-                "roundcube/plugin-installer": "*",
-                "shama/baton": "*"
-            },
-            "require-dev": {
-                "composer/composer": "1.0.*@dev",
-                "phpunit/phpunit": "4.1.*"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "Composer\\Installers\\Plugin",
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Composer\\Installers\\": "src/Composer/Installers"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Kyle Robinson Young",
-                    "email": "kyle@dontkry.com",
-                    "homepage": "https://github.com/shama"
-                }
-            ],
-            "description": "A multi-framework Composer library installer",
-            "homepage": "https://composer.github.io/installers/",
-            "keywords": [
-                "Craft",
-                "Dolibarr",
-                "Eliasis",
-                "Hurad",
-                "ImageCMS",
-                "Kanboard",
-                "MODX Evo",
-                "Mautic",
-                "Maya",
-                "OXID",
-                "Plentymarkets",
-                "Porto",
-                "RadPHP",
-                "SMF",
-                "Thelia",
-                "WolfCMS",
-                "agl",
-                "aimeos",
-                "annotatecms",
-                "attogram",
-                "bitrix",
-                "cakephp",
-                "chef",
-                "cockpit",
-                "codeigniter",
-                "concrete5",
-                "croogo",
-                "dokuwiki",
-                "drupal",
-                "elgg",
-                "expressionengine",
-                "fuelphp",
-                "grav",
-                "installer",
-                "itop",
-                "joomla",
-                "kohana",
-                "laravel",
-                "lavalite",
-                "lithium",
-                "magento",
-                "mako",
-                "mediawiki",
-                "modulework",
-                "moodle",
-                "phpbb",
-                "piwik",
-                "ppi",
-                "puppet",
-                "reindex",
-                "roundcube",
-                "shopware",
-                "silverstripe",
-                "sydes",
-                "symfony",
-                "typo3",
-                "wordpress",
-                "yawik",
-                "zend",
-                "zikula"
-            ],
-            "time": "2017-04-24 06:37:16"
-        },
-        {
             "name": "htmlburger/carbon-fields",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "eff40b0beafeb4216471b1c1e608518845ea4f29"
+                "reference": "af0ac872524f5cbfa59be47bc569da812ce242b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/eff40b0beafeb4216471b1c1e608518845ea4f29",
-                "reference": "eff40b0beafeb4216471b1c1e608518845ea4f29",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/af0ac872524f5cbfa59be47bc569da812ce242b4",
+                "reference": "af0ac872524f5cbfa59be47bc569da812ce242b4",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "~1.0",
                 "php": ">=5.3"
             },
             "require-dev": {
                 "mockery/mockery": "^0.9.7",
                 "phpunit/phpunit": "~4.8"
             },
-            "type": "wordpress-plugin",
+            "type": "library",
             "autoload": {
                 "psr-4": {
                     "Carbon_Fields\\": "core/"
@@ -243,7 +128,7 @@
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2017-07-11 07:44:41"
+            "time": "2017-07-17 13:36:00"
         }
     ],
     "packages-dev": [],

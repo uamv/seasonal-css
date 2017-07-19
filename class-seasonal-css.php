@@ -24,6 +24,15 @@ class Seasonal_CSS {
 	protected $version = SEASONAL_CSS_VERSION;
 
 	/**
+	 * Notices.
+	 *
+	 * @since    1.0
+	 *
+	 * @var      array
+	 */
+	protected $notices;
+
+	/**
 	 * Seasonal CSS.
 	 *
 	 * @since    0.1
@@ -43,16 +52,22 @@ class Seasonal_CSS {
 	 */
 	public function run() {
 
-		add_action( 'after_setup_theme', array( $this, 'load_carbon' ) );
-		add_action( 'carbon_fields_register_fields', array( $this, 'theme_options' ) );
+			if ( $this->verify_dependencies( ['carbon_fields' => '2.0.3'] ) ) {
 
-		add_filter( 'carbon_fields_seasonal_css_button_label', array( $this, 'button_text' ) );
-		// add_filter( 'carbon_fields_theme_options_container_access_capability', array( $this, 'set_capability' ), 10, 2 );
+				add_action( 'after_setup_theme', array( $this, 'load_carbon' ) );
 
-		add_action( 'init', array( $this, 'determine_active_rules' ) );
+				add_action( 'carbon_fields_register_fields', array( $this, 'theme_options' ) );
 
-		add_action( 'wp_head', array( $this, 'add_css' ) );
-		add_action( 'admin_head', array( $this, 'add_css' ) );
+				add_filter( 'carbon_fields_seasonal_css_button_label', array( $this, 'button_text' ) );
+				// add_filter( 'carbon_fields_theme_options_container_access_capability', array( $this, 'set_capability' ), 10, 2 );
+
+				add_action( 'init', array( $this, 'determine_active_rules' ) );
+
+				add_action( 'wp_head', array( $this, 'add_css' ) );
+				add_action( 'admin_head', array( $this, 'add_css' ) );
+			}
+
+			add_action( 'admin_notices', array( $this, 'show_notices' ) );
 
 	} // end constructor
 
@@ -71,6 +86,18 @@ class Seasonal_CSS {
 	    \Carbon_Fields\Carbon_Fields::boot();
 
 	} // end load_carbon
+
+	private function verify_dependencies( $deps ) {
+
+		// Check if outdated version of Carbon Fields loaded
+		if ( ! defined( '\\Carbon_Fields\\VERSION' ) || version_compare( \Carbon_Fields\VERSION, $deps['carbon_fields'], '>=' )  ) {
+			return true;
+		} else if ( version_compare( \Carbon_Fields\VERSION, $deps['carbon_fields'], '<' ) ) {
+			$this->notices[] = array( 'message' => '<a href="http://wordpress.org/plugins/seasonal-css/"><img src="' . SEASONAL_CSS_DIR_URL . 'seasonal-css-icon.png" style="float: left; width: 1.5em; height: 1.5em; margin-right: 1em;" /></a><strong>' . __('Seasonal CSS is not accessible as it is unable to load the proper version of Carbon Fields. An older version (' . \Carbon_Fields\VERSION) . ') has already been loaded on this site.</strong>', 'class' => 'error' );
+			return false;
+		}
+
+	}
 
 	/**
 	 * Define available seasonal CSS theme options
@@ -214,6 +241,32 @@ class Seasonal_CSS {
 	    }
 
 	} // end is_active_once
+
+	/**
+	 * Process any responses to the displayed notices.
+	 *
+	 * @since    1.0
+	 */
+	public function show_notices() {
+
+		$message = '';
+
+		if ( ! empty( $this->notices ) ) {
+			foreach ( $this->notices as $key => $notice ) {
+				if ( 'error' == $notice['class'] )
+					$message .= '<div class="notice notice-error gt-message"><p><strong>' . $notice['message'] . '</strong></p></div>';
+				elseif ( 'warning' == $notice['class'] )
+					$message .= '<div class="notice notice-warning gt-message">' . $notice['message'] . '</div>';
+				elseif ( 'info' == $notice['class'] )
+					$message .= '<div class="notice notice-info gt-message">' . $notice['message'] . '</div>';
+				else
+					$message .= '<div class="notice notice-success fade gt-message"><p>' . $notice['message'] . '</p></div>';
+			}
+		}
+
+		echo $message;
+
+	} // end show_notices
 
 } // end class
 

@@ -42,7 +42,6 @@ define( 'SEASONAL_CSS_DIR_URL', plugin_dir_url( __FILE__ ) );
  * The core plugin class that is used to define internationalization,
  * dashboard-specific hooks, and public-facing site hooks.
  */
-// require_once( 'vendor/autoload.php' );
 require SEASONAL_CSS_DIR_PATH . 'class-seasonal-css.php';
 
 /**

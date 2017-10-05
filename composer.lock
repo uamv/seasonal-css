@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "053c7897a5695d5f1d1039d0311f306a",
-    "content-hash": "ec7a926637a40eb6ee4adc5b71df5293",
+    "content-hash": "5cf80e34de091f7dd576bf5ff0e461ca",
     "packages": [
         {
             "name": "htmlburger/carbon-fields",
-            "version": "2.0.3",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/htmlburger/carbon-fields.git",
-                "reference": "54bd146dac05a8fbbaa3e0ca5bc1c2c84b69beb6"
+                "reference": "18b35ce4d1f192ce7b1696e77c6477c6cd34a8b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/54bd146dac05a8fbbaa3e0ca5bc1c2c84b69beb6",
-                "reference": "54bd146dac05a8fbbaa3e0ca5bc1c2c84b69beb6",
+                "url": "https://api.github.com/repos/htmlburger/carbon-fields/zipball/18b35ce4d1f192ce7b1696e77c6477c6cd34a8b8",
+                "reference": "18b35ce4d1f192ce7b1696e77c6477c6cd34a8b8",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +127,7 @@
             ],
             "description": "WordPress developer-friendly custom fields for post types, taxonomy terms, users, comments, widgets, options and more.",
             "homepage": "http://carbonfields.net/",
-            "time": "2017-07-18 12:31:28"
+            "time": "2017-09-25T08:41:27+00:00"
         }
     ],
     "packages-dev": [],

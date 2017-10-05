@@ -5,7 +5,7 @@ Donate link: https://typewheel.xyz/give
 Tags: css, scss, theme, style, time, seasons, design
 Requires at least: 3.1
 Tested up to: 4.8
-Stable tag: 0.3
+Stable tag: 0.4
 License: GPLv2 or later
 
 Applies seasonal CSS to your site
@@ -37,6 +37,9 @@ The page for setting seasonal CSS rules is found as a sub-item of Appearance in 
 1. Menu Location & Adding Seasonal CSS Rules
 
 == Changelog ==
+
+= 0.4 =
+* Updated Carbon Fields library
 
 = 0.2 =
 * Custom button text

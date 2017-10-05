@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://typewheel.xyz/wp/
- * @since             0.3
+ * @since             0.4
  * @package           Seasonal CSS
  *
  * @wordpress-plugin
  * Plugin Name:       Seasonal CSS
  * Plugin URI:        http://typewheel.xyz/wp/
  * Description:       The Seasonal CSS plugin was created to allow seasonal styling of a WordPress site.
- * Version:           0.3
+ * Version:           0.4
  * Author:            Typewheel
  * Author URI:        https://typewheel.xyz/
  * License:           GPL-2.0+
@@ -34,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Define plugins globals.
  */
 
-define( 'SEASONAL_CSS_VERSION', '0.3' );
+define( 'SEASONAL_CSS_VERSION', '0.4' );
 define( 'SEASONAL_CSS_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'SEASONAL_CSS_DIR_URL', plugin_dir_url( __FILE__ ) );
 

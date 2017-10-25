@@ -5,15 +5,13 @@ Donate link: https://typewheel.xyz/give
 Tags: css, scss, theme, style, time, seasons, design
 Requires at least: 3.1
 Tested up to: 4.8
-Stable tag: 0.5
+Stable tag: 0.6
 License: GPLv2 or later
 
 Applies seasonal CSS to your site
 
 == Description ==
 Add CSS rules and apply them to your site for specified range(s) of time. Optionally, you can repeat the rule yearly.
-
-**⚠️ WARNING: This plugin will currently break your site if you also have the <a href="https://wordpress.org/plugins/carbon-fields/">Carbon Fields</a> standalone plugin installed!**
 
 Do you need to hide a menu item during certain seasons of the year?
 Looking to decorate your links for the holidays?
@@ -37,6 +35,9 @@ The page for setting seasonal CSS rules is found as a sub-item of Appearance in 
 1. Menu Location & Adding Seasonal CSS Rules
 
 == Changelog ==
+
+= 0.6 =
+* Readme update
 
 = 0.5 =
 * Updated Carbon Fields library

@@ -13,7 +13,7 @@ const operators = ['=', '!='];
 /**
  * Perform the comparison.
  *
- * @param  {mixed}   a
+ * @param  {Array}   a
  * @param  {String}  operator
  * @param  {mixed}   b
  * @return {Boolean}
@@ -21,9 +21,9 @@ const operators = ['=', '!='];
 const evaluate = (a, operator, b) => {
 	switch (operator) {
 		case '=':
-			return a == b;
+			return a.includes(b);
 		case '!=':
-			return a != b;
+			return !a.includes(b);
 		default:
 			return false;
 	}
